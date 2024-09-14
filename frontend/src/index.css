@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #141414;
+}
+
+@layer base {
+  .h1 {
+    @apply text-[40px] font-bold tracking-wide;
+  }
+  .h2 {
+    @apply text-[28px] font-semibold tracking-wide;
+  }
+  .h3 {
+    @apply text-[24px] font-normal tracking-wide;
+  }
+  .h4 {
+    @apply text-[20px] font-normal tracking-wider;
+  }
+  .p1 {
+    @apply text-[18px] font-normal;
+  }
+  .p2 {
+    @apply text-[16px] font-normal;
+  }
+  .p3 {
+    @apply text-[14px] font-normal;
+  }
+}

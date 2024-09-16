@@ -27,7 +27,8 @@ const Signin = () => {
                     }}
                 >
                     Submit
-                </button>                <a className="p2">Create an account?</a>
+                </button>                
+                <a href='/signup' className="p2">Create an account?</a>
             </form>
         </div>
     )

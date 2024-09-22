@@ -10,22 +10,7 @@ Router.use(express.json())
 Router.use(authentication, provideUserId, async (req, res) => {
     const userId = res.locals.theUserId
 
-    const data = {
-        method: req.method,
-        originalUrl: req.originalUrl,
-        hostname: req.hostname,
-        protocol: req.protocol,
-        ip: req.ip,
-        query: req.query,
-        params: req.params,
-        headers: req.headers,
-        cookies: req.cookies,
-        signedCookies: req.signedCookies,
-        body: req.body,
-        baseUrl: req.baseUrl,
-    }
-
-    const response = await httpTracer.findOneAndUpdate({ userId }, { $push: { httpData: data } }, { new: true })
+    const response = await httpTracer.findOne({ userId })
 
     // await httpTracer.find({ userId })
 
@@ -35,6 +20,7 @@ Router.use(authentication, provideUserId, async (req, res) => {
             success: false
         })
     }
+
     res.status(200).json({
         msg: `Successfull!`,
         success: true,

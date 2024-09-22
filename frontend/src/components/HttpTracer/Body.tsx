@@ -1,8 +1,14 @@
-import React from 'react'
+import { JSONTree } from "react-json-tree"
+import { currentHttpDataAtom, httpTracerData } from "../../store/atoms"
+import { useRecoilValue } from "recoil"
 
 const Body = () => {
+  const curtentHttpData = useRecoilValue(currentHttpDataAtom)
+
   return (
-    <div>Body</div>
+    <div className="w-full">
+      <JSONTree data={curtentHttpData} theme={'monokai'} />
+    </div>
   )
 }
 

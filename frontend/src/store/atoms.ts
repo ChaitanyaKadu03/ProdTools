@@ -12,7 +12,12 @@ const activeBranch = atom({
 
 const httpTracerData = atom({
     key: 'httpTracerData',
-    default: { data: [{ "type": "sample" }] }
+    default: []
 })
 
-export { branchList, activeBranch, httpTracerData }
+const currentHttpDataAtom = atom({
+    key: 'currentHttpDataAtom',
+    default: {}
+})
+
+export { branchList, activeBranch, httpTracerData, currentHttpDataAtom }

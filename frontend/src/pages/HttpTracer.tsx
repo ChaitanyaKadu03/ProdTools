@@ -4,11 +4,11 @@ import Body from '../components/HttpTracer/Body'
 
 const HttpTracer = () => {
     return (
-        <div className='text-black1'>
-            <p>https://httptracer.com/temps/cd9bf1db-6676s-d236-468d</p>
-            <div>
-                <div><Navigation /></div>
-                <div><Body /></div>
+        <div className='text-black1 flex flex-col gap-8'>
+            <div className='flex w-full justify-center'><p className='mt-8 px-12 py-4 bg-orange2 rounded-full cursor-pointer' >http://localhost:3000/httptracer/gethttp</p></div>
+            <div className='flex gap-6'>
+                <Navigation />
+                <Body />
             </div>
         </div>
     )

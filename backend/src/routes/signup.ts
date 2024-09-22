@@ -5,6 +5,7 @@ import { aPlainPage } from '../database/aPlainPage/aPlainPage.db'
 import userInfoZodCheck from '../zod/userInfo.zod'
 import jwt from "jsonwebtoken";
 import * as dotenv from 'dotenv'
+import { httpTracer } from "../database/httpTracer/httpTracer";
 dotenv.config()
 const JWT_PRIVATE_KEY: string = process.env.JWT_PRIVATE_KEY || ''
 
@@ -42,6 +43,8 @@ Router.post('/', async (req, res) => {
         await taskFlowIndividualTodos.create({ title: 'Create a webite', todos: ['UI/UX Design', 'Create the backend', 'Complete the frontend'], branchId: taskFlowBranchTodosData._id })  // Create taskFlowIndividualTodos schema
 
         await aPlainPage.create({ data: 'Welcome!', userId: userData._id })  // Create aPlainPage schema
+
+        await httpTracer.create({ httpData: [], userId: userData._id })  // Create httptracer schema
 
         return res.status(200).json({
             msg: "Welcome to ProdTools!",

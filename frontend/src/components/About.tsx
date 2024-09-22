@@ -1,5 +1,3 @@
-import React from 'react'
-
 const About = () => {
   return (
     <div className='flex flex-col justify-center items-center gap-8 text-center py-[96px] bg-black5 text-black1'>

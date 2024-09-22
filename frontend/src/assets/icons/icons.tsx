@@ -4,6 +4,7 @@ import tick from './tick.svg'
 import note from './note.png'
 import page from './page.png'
 import server from './server.png'
+import plus from './plus.svg'
 
 export {
     arrow,
@@ -11,5 +12,6 @@ export {
     tick,
     note,
     page,
-    server
+    server, 
+    plus,
 }

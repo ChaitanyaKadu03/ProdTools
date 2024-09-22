@@ -1,8 +1,10 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 import Signup from './pages/Signup'
 import Signin from './pages/Signin'
-import Home from './pages/Home';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ASimplePage from './pages/ASinglePage';
+import TaskFlow from './pages/TaskFlow';
+import HttpTracer from './pages/HttpTracer';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/a-simple-page' element={<ASimplePage />} />
+        <Route path='/taskflow' element={<TaskFlow />} />
+        <Route path='/http-tracer' element={<HttpTracer />} />
       </Routes>
     </BrowserRouter>
   )

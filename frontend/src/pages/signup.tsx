@@ -28,6 +28,8 @@ const Signup = () => {
                             alert("Please check the inputs")
                         }
 
+                        localStorage.setItem("token", response.data.token)
+
                         navigate('/')
                     }}
                 >
